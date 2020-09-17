@@ -42,18 +42,20 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: <Widget>[
             CarouselSlider(
-              height: 200.0,
-              autoPlay: true,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              autoPlayCurve: Curves.fastOutSlowIn,
-              pauseAutoPlayOnTouch: Duration(seconds: 10),
-              aspectRatio: 2.0,
-              onPageChanged: (index) {
-                setState(() {
-                  _currentIndex = index;
-                });
-              },
+              options: CarouselOptions(
+                height: 200.0,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                pauseAutoPlayOnTouch: true,
+                aspectRatio: 2.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+                },
+              ),
               items: cardList.map((card){
                 return Builder(
                   builder:(BuildContext context){
