@@ -1,6 +1,6 @@
-# card_carousel
+# Card Carousel
 
-A new Flutter project.
+[A new Flutter project for creating Card Carousel.](https://medium.com/flutter-community/how-to-create-card-carousel-in-flutter-979bc8ecf19)
 
 ## Getting Started
 
